@@ -4,7 +4,14 @@ A library to detect secrets in codebases and texts through Shannon entropy.
 
 ## Usage
 
+```
+npm i passive_code_secrets_detector
+```
+
+
 ```javscript
+> const passive_code_secrets_detector = require("passive_code_secrets_detector")
+
 > passive_code_secrets_detector.scan_text("HELLO WORLD")
 []
 > passive_code_secrets_detector.scan_text("b3BlbnNzaC1rZXktdjEAA")
