@@ -1,0 +1,11 @@
+{
+  "name": "passive_code_secrets_detector",
+  "version": "1.0.0",
+  "description": "A library to detect secrets in codebases and texts through Shannon entropy.",
+  "main": "passive_code_secrets_detector.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "author": "Mazin Ahmed",
+  "license": "MIT"
+}
