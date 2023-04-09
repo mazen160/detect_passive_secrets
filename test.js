@@ -26,8 +26,16 @@ assert(x.length > 0)
 data = readFile("tests/secret-2.txt")
 x = secrets_detector.scan_text(data)
 assert(x.length > 0)
+
 data = readFile("tests/normal-1.txt")
 x = secrets_detector.scan_text(data)
 assert(x.length == 0)
+
+data = readFile("tests/github-key-1.txt")
+x = secrets_detector.scan_text(data)
+assert(x.length > 0)
+data = readFile("tests/github-key-2.txt")
+x = secrets_detector.scan_text(data)
+assert(x.length > 0)
 
 console.log("✅ tests passed.")
