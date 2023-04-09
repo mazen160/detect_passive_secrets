@@ -1,5 +1,5 @@
 const assert = require('assert');
-const passive_code_secrets_detector = require("./passive_code_secrets_detector.js")
+const secrets_detector = require("./detect_passive_secrets.js")
 const fs = require("fs")
 function readFile(filepath) {
     return fs.readFileSync(filepath,
@@ -8,26 +8,26 @@ function readFile(filepath) {
 
 
 var data = readFile("tests/wikipedia-usa.txt")
-var x = passive_code_secrets_detector.scan_text(data)
+var x = secrets_detector.scan_text(data)
 assert(x.length == 0)
 
 data = readFile("tests/test-key")
-x = passive_code_secrets_detector.scan_text(data)
+x = secrets_detector.scan_text(data)
 assert(x.length > 0)
 
 data = readFile("tests/test-key.pub")
-x = passive_code_secrets_detector.scan_text(data)
+x = secrets_detector.scan_text(data)
 assert(x.length > 0)
 
 data = readFile("tests/secret-1.txt")
-x = passive_code_secrets_detector.scan_text(data)
+x = secrets_detector.scan_text(data)
 assert(x.length > 0)
 
 data = readFile("tests/secret-2.txt")
-x = passive_code_secrets_detector.scan_text(data)
+x = secrets_detector.scan_text(data)
 assert(x.length > 0)
 data = readFile("tests/normal-1.txt")
-x = passive_code_secrets_detector.scan_text(data)
+x = secrets_detector.scan_text(data)
 assert(x.length == 0)
 
 console.log("✅ tests passed.")

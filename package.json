@@ -1,8 +1,8 @@
 {
-  "name": "passive_code_secrets_detector",
+  "name": "detect_passive_secrets",
   "version": "1.0.0",
-  "description": "A library to detect secrets in codebases and texts through Shannon entropy.",
-  "main": "passive_code_secrets_detector.js",
+  "description": "A library that detects secrets in codebases and texts through Shannon entropy.",
+  "main": "detect_passive_secrets.js",
   "scripts": {
     "test": "node test.js"
   },
@@ -13,10 +13,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mazen160/passive_code_secrets_detector.git"
+    "url": "git+https://github.com/mazen160/detect_passive_secrets.git"
   },
   "bugs": {
-    "url": "https://github.com/mazen160/passive_code_secrets_detector/issues"
+    "url": "https://github.com/mazen160/detect_passive_secrets/issues"
   },
-  "homepage": "https://github.com/mazen160/passive_code_secrets_detector#readme"
+  "homepage": "https://github.com/mazen160/detect_passive_secrets#readme"
 }
