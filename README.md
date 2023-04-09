@@ -30,7 +30,7 @@ npm i detect_passive_secrets
 
 The `scan_text` function takes in a string as an input, and returns an array of detected secrets, if any.
 
-Note: This library does not guarantee 100% accuracy. Users should run thorough tests to validate its results against planned use-cases.
+**Note:** This library does not guarantee 100% accuracy. Users should run thorough tests to validate its results against planned use-cases.
 
 # License
 
