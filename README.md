@@ -35,3 +35,12 @@ Note: This library does not guarantee 100% accuracy. Users should run thorough t
 # License
 
 The project is released under the MIT license. See LICENSE.txt for more details.
+
+# Author
+
+**Mazin Ahmed**
+
+- Website: https://mazinahmed.net
+- Email: `mazin [at] mazinahmed [dot] net`
+- Twitter: https://twitter.com/mazen160
+- Linkedin: http://linkedin.com/in/infosecmazinahmed
