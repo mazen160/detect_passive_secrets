@@ -1,22 +1,19 @@
-# detect_passive_secrets
+# detect_passive_secrets.JS
 
-detect_passive_secrets.js is a Node.JS library that detects secrets in codebases and texts through Shannon entropy. It is designed to be a passive tool that scans for potential secrets without making any relying on pre-defined lists of Regular Expression patterns.
+`detect_passive_secrets.js` is a Node.JS library that detects secrets in codebases and texts through Shannon entropy. It is designed to be a passive tool that scans for potential secrets without making any relying on pre-defined lists of Regular Expression patterns.
 
 ## Installation
 
-To install detect_passive_secrets.js, simply run:
+To install `detect_passive_secrets.js`, simply run:
 
-```
-npm install detect_passive_secrets
+```shell
+$ npm install detect_passive_secrets
 ```
 
 ## Usage
 
-```
-npm i detect_passive_secrets
-```
 
-```javscript
+```node
 > const secrets_detector = require("detect_passive_secrets")
 
 > secrets_detector.scan_text("HELLO WORLD")
