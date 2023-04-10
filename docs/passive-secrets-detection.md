@@ -41,7 +41,7 @@ This will output:
 
 ```
 
-In this example, the library has detected the sequence of characters "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789" and "190565d07dcd5de159931361f924b50f" as a potential secret.
+In this example, the library has detected the sequence of characters `ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789` and `190565d07dcd5de159931361f924b50f` as a potential secret.
 
 ## Prompt Engineering and passive secrets detection
 
