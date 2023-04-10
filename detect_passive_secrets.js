@@ -69,8 +69,8 @@ function scan_text(text, threshold = 20) {
             b64_entropy = shannon_entropy(c)
             if (b64_entropy > 4.0) {
                 // console.debug(`B64 Entropy of ${c} is ${b64_entropy}`)
-                if (!strings_found.includes(c)) {
-                    strings_found.push(c)
+                if (!strings_found.includes(word)) {
+                    strings_found.push(word)
                 }
             }
         })
@@ -80,8 +80,8 @@ function scan_text(text, threshold = 20) {
             hex_entropy = shannon_entropy(c)
             if (hex_entropy > 3.5) {
                 // console.debug(`Hex Entropy of ${c} is ${hex_entropy}`)
-                if (!strings_found.includes(c)) {
-                    strings_found.push(c)
+                if (!strings_found.includes(word)) {
+                    strings_found.push(word)
                 }
             }
         })
