@@ -28,7 +28,7 @@ Then, you can use the `scan_text` function to scan a text or codebase for potent
 const detect_passive_secrets = require("detect_passive_secrets");
 
 const text =
-  "This is a text that might contain secrets like an API key: ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 or 190565d07dcd5de159931361f924b50f";
+  "This is a text that might contain secrets like an API key: ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 or 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";
 const secrets = detect_passive_secrets.scan_text(text);
 
 console.log(secrets);
@@ -37,11 +37,11 @@ console.log(secrets);
 This will output:
 
 ```javascript
-> [ 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789' , '190565d07dcd5de159931361f924b50f']
+> [ 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789' , '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']
 
 ```
 
-In this example, the library has detected the sequence of characters `ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789` and `190565d07dcd5de159931361f924b50f` as a potential secret.
+In this example, the library has detected the sequence of characters `ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789` and `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` as potential secrets.
 
 ## Prompt Engineering and passive secrets detection
 
