@@ -1,6 +1,6 @@
 {
   "name": "detect_passive_secrets",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A library that detects secrets in codebases and texts through Shannon entropy.",
   "main": "detect_passive_secrets.js",
   "scripts": {
