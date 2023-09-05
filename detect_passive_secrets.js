@@ -1,6 +1,10 @@
 const BASE64_CHARS = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/="
 const HEX_CHARS = "1234567890abcdefABCDEF"
 
+const DEFAULT_HEX_ENTROPY = 3.5
+const DEFAULT_BASE64_ENTROPY = 4.05
+
+
 // Create an array of character frequencies.
 const getFrequencies = str => {
     let dict = new Set(str);
@@ -59,15 +63,15 @@ function get_tokenized_strings(text) {
     return strings
 }
 
-function scan_text(text, threshold = 20) {
+function scan_text(text, string_length_threshold = 20, allowed_bas64_entropy = DEFAULT_BASE64_ENTROPY, allowed_hex_entropy = DEFAULT_HEX_ENTROPY) {
     let strings_found = []
     let tokenized_strings = get_tokenized_strings(text)
     tokenized_strings.forEach(word => {
 
-        let b64_strings = get_strings_of_set(word, BASE64_CHARS, threshold = threshold)
+        let b64_strings = get_strings_of_set(word, BASE64_CHARS, threshold = string_length_threshold)
         b64_strings.forEach(c => {
             b64_entropy = shannon_entropy(c)
-            if (b64_entropy > 4.0) {
+            if (b64_entropy > allowed_bas64_entropy) {
                 // console.debug(`B64 Entropy of ${c} is ${b64_entropy}`)
                 if (!strings_found.includes(word)) {
                     strings_found.push(word)
@@ -75,10 +79,10 @@ function scan_text(text, threshold = 20) {
             }
         })
 
-        let hex_strings = get_strings_of_set(word, HEX_CHARS, threshold = threshold)
+        let hex_strings = get_strings_of_set(word, HEX_CHARS, threshold = string_length_threshold)
         hex_strings.forEach(c => {
             hex_entropy = shannon_entropy(c)
-            if (hex_entropy > 3.5) {
+            if (hex_entropy > allowed_hex_entropy) {
                 // console.debug(`Hex Entropy of ${c} is ${hex_entropy}`)
                 if (!strings_found.includes(word)) {
                     strings_found.push(word)

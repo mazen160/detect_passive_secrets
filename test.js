@@ -51,4 +51,8 @@ result = secrets_detector.scan_text(data)
 assert(result.length > 0)
 assert(result[0] == data.split("\n")[0])
 
+data = readFile("tests/test-normal-code-with-high-entropy.txt")
+result = secrets_detector.scan_text(data)
+assert(result.length < 5) // Ideally, it should not detect any secrets here, but it's hard to achieve this.
+
 console.log("✅ tests passed.")
